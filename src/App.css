@@ -1,0 +1,156 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+.title {
+  color: white;
+  width: 9999px;
+  padding: 20px;
+  font-family: Avenir, sans-serif;
+}
+.output {
+  text-align: right;
+  color: white;
+  width: 300px;
+  max-width: 100%;
+  height: 50px;
+  margin: auto;
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.output h6 {
+  margin-right: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 50px;
+  line-height: 50px;
+}
+.calculatorBody {
+  text-align: center;
+  color: white;
+  width: 300px;
+  margin: auto;
+  padding: 20px;
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.calculatorBody a {
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  width: 20px;
+  color: rgba(0,0,0,0.6);
+  background-color: rgba(255,255,255,0.3);
+  padding: 10px;
+  border-radius: 50%;
+  line-height: 50px;
+  border-style: solid;
+  border-width: 1.5px;
+  border-color: rgba(158,158,158,0.7);
+}
+
+.calculatorBody a:hover {
+  font-size: 23px;
+  background-color: rgba(0,255,255,0.2);
+  border-color: rgba(0,255,255,1);
+  border-width: 2px;
+  color: white;
+}
+#calcRow {
+  margin: 0px;
+  padding: 10px;
+}
+.operators {
+  text-align: center;
+  color: white;
+  width: 300px;
+  margin: auto;
+  background-color: rgba(255,255,255,0.5);
+  padding: 20px;
+  border-radius: 10px;
+}
+.operators a {
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 23px;
+  color: rgba(0,0,0,0.6);
+  background-color: rgba(255,255,255,0.5);
+  padding: 8px;
+  padding-bottom: 10px;
+  border-radius: 100px;
+  border-style: solid;
+  border-width: 1.5px;
+  border-color: rgba(158,158,158,0.7);
+}
+.operators a:hover {
+  border-color: rgba(255,0,0,1);
+  background-color: rgba(255,0,0,0.2);
+  color: white;
+  border-width: 2px;
+}
+#operationActive {
+  border-color: rgba(255,0,0,1);
+  background-color: rgba(255,0,0,0.2);
+  color: white;
+  border-width: 2px;
+}
+#smallbutton {
+}
+.equals {
+  text-align: center;
+  color: white;
+  width: 300px;
+  margin: auto;
+  margin-top: 20px;
+  background-color: rgba(255,255,255,0.5);
+  padding: 20px;
+  border-radius: 10px;
+}
+.equals a {
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 23px;
+  color: rgba(0,0,0,0.6);
+  background-color: rgba(255,255,255,0.5);
+  padding: 8px;
+  padding-bottom: 10px;
+  border-radius: 100px;
+  border-style: solid;
+  border-width: 1.5px;
+  border-color: rgba(158,158,158,0.7);
+}
+.equals a:hover {
+  border-color: rgba(2,255,2,1);
+  background-color: rgba(2,255,2,0.2);
+  color: white;
+  border-width: 2px;
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
