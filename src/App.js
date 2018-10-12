@@ -15,30 +15,30 @@ class App extends Component {
 
   changeNumber = (number) => {
     if (!this.state.operation) {
-    let currentNumber;
-    currentNumber = this.state.number + number;
-    this.setState({
-      number: currentNumber
-    });
-  }
-  else if (this.state.operation && this.state.secondNumberTime) {
-  let currentNumber;
-  currentNumber = this.state.number + number;
-  this.setState({
-    number: currentNumber
-  });
-} else {
-    this.setState({
-      number: ""
-    }, () => {
       let currentNumber;
       currentNumber = this.state.number + number;
       this.setState({
-        number: currentNumber,
-        secondNumberTime: true
+        number: currentNumber
       });
-    });
-  }
+    }
+    else if (this.state.operation && this.state.secondNumberTime) {
+      let currentNumber;
+      currentNumber = this.state.number + number;
+      this.setState({
+        number: currentNumber
+      });
+    } else {
+      this.setState({
+        number: ""
+      }, () => {
+        let currentNumber;
+        currentNumber = this.state.number + number;
+        this.setState({
+          number: currentNumber,
+          secondNumberTime: true
+        });
+      });
+    }
   };
 
   addDecimal = () => {
@@ -169,71 +169,71 @@ class App extends Component {
         <div className = "output">
           <h6>{this.state.number}</h6>
         </div>
-      <div className="calculatorBody">
-        <div className="row" id="calcRow">
-          <div className="col s4 m4">
-            <a onClick={() => this.changeNumber(7)}>&nbsp;7&nbsp;</a>
+        <div className="calculatorBody">
+          <div className="row" id="calcRow">
+            <div className="col s4 m4">
+              <a onClick={() => this.changeNumber(7)}>&nbsp;7&nbsp;</a>
+            </div>
+            <div className="col s4 m4">
+              <a onClick={() => this.changeNumber(8)}>&nbsp;8&nbsp;</a>
+            </div>
+            <div className="col s4 m4">
+              <a onClick={() => this.changeNumber(9)}>&nbsp;9&nbsp;</a>
+            </div>
           </div>
-          <div className="col s4 m4">
-            <a onClick={() => this.changeNumber(8)}>&nbsp;8&nbsp;</a>
+          <div className="row" id="calcRow">
+            <div className="col s4 m4">
+              <a onClick={() => this.changeNumber(4)}>&nbsp;4&nbsp;</a>
+            </div>
+            <div className="col s4 m4">
+              <a onClick={() => this.changeNumber(5)}>&nbsp;5&nbsp;</a>
+            </div>
+            <div className="col s4 m4">
+              <a onClick={() => this.changeNumber(6)}>&nbsp;6&nbsp;</a>
+            </div>
           </div>
-          <div className="col s4 m4">
-            <a onClick={() => this.changeNumber(9)}>&nbsp;9&nbsp;</a>
+          <div className="row" id="calcRow">
+            <div className="col s4 m4">
+              <a id="smallbutton" onClick={() => this.changeNumber(1)}>&nbsp;1&nbsp;</a>
+            </div>
+            <div className="col s4 m4">
+              <a onClick={() => this.changeNumber(2)}>&nbsp;2&nbsp;</a>
+            </div>
+            <div className="col s4 m4">
+              <a onClick={() => this.changeNumber(3)}>&nbsp;3&nbsp;</a>
+            </div>
+          </div>
+          <div className="row" id="calcRow">
+            <div className="col s4 m4">
+              <a onClick={() => this.changeNumber(0)}>&nbsp;0&nbsp;</a>
+            </div>
+            <div className="col s4 m4">
+              <a id="smallbutton" onClick={this.addDecimal}>&nbsp;.&nbsp;</a>
+            </div>
+            <div className="col s4 m4">
+              <a onClick = {this.allClear}>AC</a>
+            </div>
           </div>
         </div>
-        <div className="row" id="calcRow">
-          <div className="col s4 m4">
-            <a onClick={() => this.changeNumber(4)}>&nbsp;4&nbsp;</a>
-          </div>
-          <div className="col s4 m4">
-            <a onClick={() => this.changeNumber(5)}>&nbsp;5&nbsp;</a>
-          </div>
-          <div className="col s4 m4">
-            <a onClick={() => this.changeNumber(6)}>&nbsp;6&nbsp;</a>
-          </div>
-        </div>
-        <div className="row" id="calcRow">
-          <div className="col s4 m4">
-            <a id="smallbutton" onClick={() => this.changeNumber(1)}>&nbsp;1&nbsp;</a>
-          </div>
-          <div className="col s4 m4">
-            <a onClick={() => this.changeNumber(2)}>&nbsp;2&nbsp;</a>
-          </div>
-          <div className="col s4 m4">
-            <a onClick={() => this.changeNumber(3)}>&nbsp;3&nbsp;</a>
+        <div className="operators">
+          <div className="row" id="calcRow">
+            <div className="col s3 m3">
+              <a id={addition} onClick={this.addition}>&nbsp;&#43;&nbsp;</a>
+            </div>
+            <div className="col s3 m3">
+              <a id={subtraction} onClick={this.subtraction}>&nbsp;&#8722;&nbsp;</a>
+            </div>
+            <div className="col s3 m3">
+              <a id={multiplication} onClick={this.multiplication}>&nbsp;&#215;&nbsp;</a>
+            </div>
+            <div className="col s3 m3">
+              <a id={division} onClick={this.division}>&nbsp;&#247;&nbsp;</a>
+            </div>
           </div>
         </div>
-        <div className="row" id="calcRow">
-          <div className="col s4 m4">
-            <a onClick={() => this.changeNumber(0)}>&nbsp;0&nbsp;</a>
-          </div>
-          <div className="col s4 m4">
-            <a id="smallbutton" onClick={this.addDecimal}>&nbsp;.&nbsp;</a>
-          </div>
-          <div className="col s4 m4">
-            <a onClick = {this.allClear}>AC</a>
-          </div>
+        <div className = "equals">
+          <a onClick={this.equals}>&nbsp;=&nbsp;</a>
         </div>
-      </div>
-      <div className="operators">
-      <div className="row" id="calcRow">
-        <div className="col s3 m3">
-          <a id={addition} onClick={this.addition}>&nbsp;&#43;&nbsp;</a>
-        </div>
-        <div className="col s3 m3">
-          <a id={subtraction} onClick={this.subtraction}>&nbsp;&#8722;&nbsp;</a>
-        </div>
-        <div className="col s3 m3">
-          <a id={multiplication} onClick={this.multiplication}>&nbsp;&#215;&nbsp;</a>
-        </div>
-        <div className="col s3 m3">
-          <a id={division} onClick={this.division}>&nbsp;&#247;&nbsp;</a>
-        </div>
-      </div>
-    </div>
-    <div className = "equals">
-        <a onClick={this.equals}>&nbsp;=&nbsp;</a>
-    </div>
       </div>
     )
   }
