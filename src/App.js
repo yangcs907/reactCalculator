@@ -90,28 +90,28 @@ class App extends Component {
       secondNumberSaved: parseFloat(this.state.number)
     }, () => {
       if (this.state.operation === "addition") {
-        let result = (this.state.firstNumberSaved) + (this.state.secondNumberSaved);
+        let result = (this.state.firstNumberSaved) + (this.state.secondNumberSaved).toFixed(9);
         this.setState({
           number: result,
           operation: "",
           secondNumberTime: false
         });
       } else if (this.state.operation === "subtraction") {
-        let result = (this.state.firstNumberSaved) - (this.state.secondNumberSaved);
+        let result = (this.state.firstNumberSaved) - (this.state.secondNumberSaved).toFixed(9);
         this.setState({
           number: result,
           operation: "",
           secondNumberTime: false
         });
       } else if (this.state.operation === "multiplication") {
-        let result = (this.state.firstNumberSaved) * (this.state.secondNumberSaved);
+        let result = (this.state.firstNumberSaved) * (this.state.secondNumberSaved).toFixed(9);
         this.setState({
           number: result,
           operation: "",
           secondNumberTime: false
         });
       } else if (this.state.operation === "division") {
-        let result = (this.state.firstNumberSaved) / (this.state.secondNumberSaved);
+        let result = (this.state.firstNumberSaved) / (this.state.secondNumberSaved).toFixed(9);
         this.setState({
           number: result,
           operation: "",

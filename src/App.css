@@ -37,9 +37,14 @@
   background-color: rgba(255,255,255,0.5);
   border-radius: 10px;
   margin-bottom: 20px;
+  /* overflow-x: hidden; */
 }
 .output h6 {
-  margin-right: 10px;
+  overflow-x: hidden;
+  font-size: 50px;
+  height: 100%;
+  margin-right: 8px;
+  margin-left: 8px;
   margin-top: 20px;
   margin-bottom: 20px;
   font-size: 50px;
@@ -152,5 +157,12 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .title {
+    padding-bottom: 0px;
+    padding-top: 0px;
   }
 }
