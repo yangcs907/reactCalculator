@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
+var http = require("http");
+setInterval(function() {
+  http.get("https://react-calculator-chris-yang.herokuapp.com/")
+}, 900000);
 
 class App extends Component {
   constructor() {
